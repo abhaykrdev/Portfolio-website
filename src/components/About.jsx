@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Phone, Mail, User, ShieldCheck, Code, Film, BarChart, FileSpreadsheet, ExternalLink, Database, Cpu } from 'lucide-react';
+import { Calendar, MapPin, Phone, Mail, User, ShieldCheck, Code, Film, BarChart, FileSpreadsheet, ExternalLink, Database, Cpu, FlaskConical, LineChart, Wifi } from 'lucide-react';
 import { 
   SiPython, SiCplusplus, SiNumpy, SiPandas,
   SiJupyter, SiFigma, SiCanva, SiBlender, SiUnity, SiUnrealengine 
@@ -9,7 +9,7 @@ import { FaGamepad } from 'react-icons/fa6';
 
 const SkillIcon = ({ icon: Icon, name, isMagenta }) => (
   <div className={`flex flex-col items-center gap-2 group p-4 glass-panel rounded-lg border border-[#333] hover:border-${isMagenta ? 'cyber-magenta' : 'cyber-blue'} transition-colors justify-center bg-[#0d0d0d]/90 backdrop-blur-md`}>
-    <Icon className={`text-3xl text-gray-400 group-hover:text-[var(--tw-colors-${isMagenta ? 'cyber-magenta' : 'cyber-blue'})] group-hover:drop-shadow-[0_0_10px_var(--tw-colors-${isMagenta ? 'cyber-magenta' : 'cyber-blue'})] transition-all`} />
+    <Icon className={`text-3xl text-gray-300 group-hover:text-[var(--tw-colors-${isMagenta ? 'cyber-magenta' : 'cyber-blue'})] group-hover:drop-shadow-[0_0_10px_var(--tw-colors-${isMagenta ? 'cyber-magenta' : 'cyber-blue'})] transition-all`} />
     <span className={`text-xs font-heading tracking-wider text-gray-200 group-hover:text-${isMagenta ? 'cyber-magenta' : 'cyber-blue'} text-center mt-2`}>{name}</span>
   </div>
 );
@@ -22,6 +22,9 @@ const About = () => {
     { name: "PyGame", icon: FaGamepad },
     { name: "NumPy", icon: SiNumpy },
     { name: "Pandas", icon: SiPandas },
+    { name: "Matplotlib", icon: LineChart },
+    { name: "Requests", icon: Wifi },
+    { name: "Flask", icon: FlaskConical },
   ];
 
   const platformSkills = [
@@ -37,7 +40,7 @@ const About = () => {
   ];
 
   return (
-    <div className="w-full flex-1 flex py-16 px-6 relative z-10 mx-auto max-w-7xl h-full items-start overflow-y-auto container-scroll">
+    <div className="w-full py-24 px-6 relative z-10 mx-auto max-w-7xl">
       <div className="w-full flex flex-col gap-16 pb-12">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -66,12 +69,12 @@ const About = () => {
               Who am I?
             </h3>
             
-            <p className="text-gray-300 mb-6 leading-relaxed font-body">
-              I'm a dedicated developer with a deep passion for <span className="text-cyber-blue font-semibold">game design, development</span>, and <span className="text-cyber-magenta font-semibold">cybersecurity</span>. My journey in tech started with a curiosity about how games work, which evolved into a dedication to creating immersive digital experiences.
+            <p className="text-gray-200 mb-6 leading-relaxed font-body">
+              Results-oriented Computer Science Engineering student with <span className="text-cyber-blue font-semibold">6+ months of professional Unity game development</span> experience at Akiyam Solutions Pvt. Ltd., where I contributed to a commercial psychological horror game. Proficient in <span className="text-cyber-magenta font-semibold">C/C++, C#, Python, JavaScript, SQL</span>, and OOP principles.
             </p>
             
-            <p className="text-gray-300 mb-8 leading-relaxed font-body">
-              As an ethical hacker, I'm fascinated by understanding system vulnerabilities to build more secure applications. I believe the intersection of creative game design and robust security practices leads to exceptional digital products.
+            <p className="text-gray-100 mb-8 leading-relaxed font-body">
+              Built <span className="text-cyber-blue font-semibold">AI-powered applications</span>, network security tools, and shipped <span className="text-cyber-magenta font-semibold">2D games using Unity and Pygame</span>. Seeking a Software Developer or Game Developer role where I can apply strong problem-solving skills with agile workflows and REST APIs.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mt-8 border-t border-[#333] pt-8">
